@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Authentication
 gem 'devise'
 gem 'devise-jwt'
-gem 'react_on_rails'
+gem 'react_on_rails', '11.1.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
