@@ -32,7 +32,4 @@
 
 <%= link_to 'New Customer', new_customer_path %>
 
-
-
-
-<%= react_component("HelloWorld", props: @customers, prerender: false) %>
+<%= react_component("Post", {title: "Hello World"}) %>
