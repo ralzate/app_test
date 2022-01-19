@@ -105,7 +105,6 @@ GEM
     devise-jwt (0.9.0)
       devise (~> 4.0)
       warden-jwt_auth (~> 0.6)
-    digest (3.1.0)
     dry-auto_inject (0.8.0)
       dry-container (>= 0.3.4)
     dry-configurable (0.14.0)
@@ -123,7 +122,6 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    io-wait (0.2.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -145,13 +143,6 @@ GEM
       libv8-node (~> 16.10.0.0)
     minitest (5.15.0)
     msgpack (1.4.2)
-    net-protocol (0.1.2)
-      io-wait
-      timeout
-    net-smtp (0.3.1)
-      digest
-      net-protocol
-      timeout
     nio4r (2.5.8)
     nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
@@ -237,7 +228,6 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.2.1)
     tilt (2.0.10)
-    timeout (0.2.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -295,7 +285,6 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_racer
-  net-smtp
   pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
