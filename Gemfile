@@ -34,6 +34,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 gem 'devise-jwt'
 gem 'react-rails'
+gem 'net-ssh'
 gem 'web_components_rails'
 
 group :development, :test do
