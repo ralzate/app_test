@@ -31,7 +31,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Authentication
-gem 'devise'
+gem 'devise' 
 gem 'devise-jwt'
 gem 'react-rails'
 gem 'net-ssh'
