@@ -3,7 +3,7 @@ class CustomersController < ApplicationController
 
   # GET /customers or /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /customers/1 or /customers/1.json
@@ -50,7 +50,6 @@ class CustomersController < ApplicationController
   # DELETE /customers/1 or /customers/1.json
   def destroy
     @customer.destroy
-
     respond_to do |format|
       format.html { redirect_to customers_url, notice: "Customer was successfully destroyed." }
       format.json { head :no_content }

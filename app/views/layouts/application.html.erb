@@ -11,9 +11,37 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
+    <% if current_user %>
+      <style>
+        .show{
+          display: none;
+        }
+      </style>
+    <% else %>
+      <style>
+        .hide{
+            display: none;
+          }
+      </style>
+    <% end %>
+    <%= javascript_pack_tag 'application', 'components/navigation_menu' %>
+    <br>
+    
     <%= yield %>
+  
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+    <br/>
+    <%= javascript_pack_tag 'application', 'components/footer' %>
+    </main>
   </body>
 </html>

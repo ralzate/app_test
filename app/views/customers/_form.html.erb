@@ -1,37 +1,63 @@
-<%= form_with(model: customer) do |form| %>
-  <% if customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-
-      <ul>
-        <% customer.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<div class="container">
+  <div class=" text-center mt-5 ">
+    <h1>Customer Info</h1>
   </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <div class="row ">
+      <div class="col-lg-7 mx-auto">
+        <div class="card mt-2 mx-auto p-4 bg-light">
+          <div class="card-body bg-light">
+            <div class="container">
+              <%= form_with(model: customer, html: {id: "contact-form"}) do |form| %>
+                <% if customer.errors.any? %>
+                  <div id="error_explanation">
+                  <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+                  <% customer.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :name %>
+                      <%= form.text_field :name, class: "form-control" %>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :email %>
+                      <%= form.text_field :email, class: "form-control" %>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :city %>
+                      <%= form.text_field :city, class: "form-control" %>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <%= form.label :company %>
+                      <%= form.text_field :company, class: "form-control" %>
+                    </div>
+                  </div>
+                  </div>
+                  <br/>
+                  <div class="actions">
+                    <div class="col-md-6"> 
+                      <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Send"> 
+                      <%= link_to "Back", customers_path, :class => "btn btn-secondary text-white" %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+          </div>
+        </div>
+      </div> 
+    </div> 
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :company %>
-    <%= form.text_field :company %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
